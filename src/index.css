@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: local("InterMedium"),
+    url("./fonts/Inter/Inter-Medium.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Rubik", sans-serif;
+  src: local("RubikMedium"),
+    url("./fonts/Rubik/Rubik-Medium.ttf") format("truetype");
+  font-weight: bold;
+}
+
+body {
+  background-color: rgb(174, 138, 138);
+}
+
+#root {
+  background-color: white;
+  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 500px;
+  width: 400px;
+}

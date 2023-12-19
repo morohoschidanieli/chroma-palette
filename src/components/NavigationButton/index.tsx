@@ -1,4 +1,4 @@
-import { defaultNavigationButtonClassName } from "@constants/classes";
+import { defaultButtonClassName } from "@constants/classes";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useThemeDetector } from "@hooks";
@@ -44,7 +44,7 @@ const NavigationButton = ({
         >
           <button
             style={extraStyle || undefined}
-            className={buttonClassName + defaultNavigationButtonClassName}
+            className={buttonClassName + defaultButtonClassName}
             title={title || undefined}
           >
             <FontAwesomeIcon icon={icon} />
@@ -53,7 +53,7 @@ const NavigationButton = ({
       ) : (
         <button
           style={extraStyle || undefined}
-          className={buttonClassName + defaultNavigationButtonClassName}
+          className={buttonClassName + defaultButtonClassName}
           onClick={onClick || undefined}
         >
           <FontAwesomeIcon

@@ -1,3 +1,11 @@
 export { default as Header } from "./Header";
 export { default as Footer } from "./Footer";
 export { default as NavigationButton } from "./NavigationButton";
+export { default as Slider } from "./Slider";
+export { default as Button } from "./Button";
+export { default as Dropdown } from "./Dropdown";
+export { default as DropdownItem } from "./DropdownItem";
+export { default as RGBSlider } from "./RGBSlider";
+export { default as CMYKSlider } from "./CMYKSlider";
+export { default as HSLSlider } from "./HSLSlider";
+export { default as HSVSlider } from "./HSVSlider";

@@ -1,2 +1,2 @@
-export { default as Adjust } from "./Adjust";
-export { default as Contrast } from "./Contrast";
+export { default as Adjust } from "./adjust";
+export { default as Contrast } from "./contrast";

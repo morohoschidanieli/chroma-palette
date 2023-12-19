@@ -26,7 +26,8 @@
       "@hooks": ["hooks"],
       "@constants/*": ["constants/*"],
       "@pages": ["pages"],
-      "@utils": ["utils"]
+      "@utils": ["utils"],
+      "@context": ["context"]
     }
   },
   "include": ["src"],

@@ -8,4 +8,7 @@ export { default as DropdownItem } from "./DropdownItem";
 export { default as RGBSlider } from "./RGBSlider";
 export { default as CMYKSlider } from "./CMYKSlider";
 export { default as HSLSlider } from "./HSLSlider";
-export { default as HSVSlider } from "./HSVSlider";
+export { default as SliderSelector } from "./SliderSelector";
+export { default as ColorPreview } from "./ColorPreview";
+export { default as Collection } from "./Collection";
+export { default as CollectionItem } from "./CollectionItem";

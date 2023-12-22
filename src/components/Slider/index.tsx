@@ -1,40 +1,48 @@
-import styled from "styled-components";
+import { StyledSlider } from "./styles";
 
 interface SliderProps {
   min: number;
   max: number;
   value: number;
   id: string;
+  step?: number;
+  unit?: string;
+  color?: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   className?: string;
 }
 
-const StyledSlider = styled.input`
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: transparent;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 2px solid white;
-    cursor: pointer;
-  }
-`;
-
-const Slider = ({ min, max, value, id, className, onChange }: SliderProps) => {
+const Slider = ({
+  min,
+  max,
+  value,
+  id,
+  step,
+  className,
+  unit,
+  color,
+  onChange,
+}: SliderProps) => {
   return (
     <div className="flex flex-row justify-center items-center">
       <StyledSlider
-        className={`p-1 h-5 my-1 w-full rounded-3xl ${className}`}
+        className={`p-1 h-4 my-2 w-full rounded-3xl ${className}`}
+        color={color}
         type="range"
         min={min}
         max={max}
+        step={step || 1}
         value={value}
         id={id}
         onChange={onChange}
-        style={{ WebkitAppearance: "none" }}
+        style={{
+          WebkitAppearance: "none",
+        }}
       />
-      <div className="w-14">{value}</div>
+      <div className="w-14">
+        {value}
+        {unit ? unit : ""}
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import {
   Dropdown,
   DropdownItem,
   ColorPreview,
+  CollectionItem,
 } from "@components";
 import {
   faCopy,
@@ -23,7 +24,19 @@ const Adjust = () => {
     useState<TColorRepresentation>("rgb");
 
   const copyHandler = () => {
-    console.log("servus");
+    console.log("Copy Handler");
+  };
+
+  const renameHandler = () => {
+    console.log("rename Handler");
+  };
+
+  const deleteHandler = () => {
+    console.log("delete Handler");
+  };
+
+  const addHandler = () => {
+    console.log("add Handler");
   };
 
   const changeDropdownHandler = (colorRepresentation: TColorRepresentation) => {
@@ -32,10 +45,16 @@ const Adjust = () => {
 
   return (
     <main className="flex flex-col justify-start p-5 items-center h-full">
-      <ColorPreview onClick={() => console.log("DA")} color="#ff0000" />
+      <ColorPreview
+        onClick={() => console.log("On Press Event")}
+        color="#ff0000"
+      />
       <div className="flex flex-row py-4 items-center justify-between w-full">
+        {/* Current color container */}
         <div className="tracking-wide font-bold text-neutral-500">#FF00FF</div>
+        {/* Color representation container */}
         <div className="flex flex-row justify-center items-center">
+          {/* Color representation dropdown */}
           <Dropdown onChangeValue={(event) => changeDropdownHandler(event)}>
             {dropdownData.map((data: IDropdownItem) => (
               <DropdownItem key={data.value} value={data.value}>
@@ -52,9 +71,11 @@ const Adjust = () => {
           />
         </div>
       </div>
+      {/* Slider for selected color representation */}
       <div className="h-auto w-full">
         <SliderSelector colorRepresentation={colorRepresentation} />
       </div>
+      {/* Collection menu for collection */}
       <div className="h-auto w-full">
         <div className="flex flex-row items-center justify-between py-4">
           <div>
@@ -71,17 +92,36 @@ const Adjust = () => {
           </div>
           <div className="flex flex-row">
             <div>
-              <Button icon={faKeyboard} title="Rename" onClick={copyHandler} />
+              <Button
+                icon={faKeyboard}
+                title="Rename"
+                onClick={renameHandler}
+              />
             </div>
             <div>
-              <Button icon={faTrash} title="Delete" onClick={copyHandler} />
+              <Button icon={faTrash} title="Delete" onClick={deleteHandler} />
             </div>
             <div>
-              <Button icon={faPlus} title="Add" onClick={copyHandler} />
+              <Button icon={faPlus} title="Add" onClick={addHandler} />
             </div>
           </div>
         </div>
-        <Collection></Collection>
+        {/* Collection items */}
+        <Collection>
+          <CollectionItem color="#00FF00" selected={true} />
+          <CollectionItem color="#FF0000" />
+          <CollectionItem color="#FFFF00" />
+          <CollectionItem color="#FFFFF0" />
+          <CollectionItem color="#00FF00" />
+          <CollectionItem color="#FF0000" />
+          <CollectionItem color="#FFFF00" />
+          <CollectionItem color="#FFFFF0" />
+          <CollectionItem color="#00FF00" />
+          <CollectionItem color="#FF0000" />
+          <CollectionItem color="#FFFF00" />
+          <CollectionItem color="#FFFFF0" />
+          <CollectionItem color="#FFFF00" />
+        </Collection>
       </div>
     </main>
   );

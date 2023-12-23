@@ -1,15 +1,24 @@
 import { CollectionItem } from "@components";
-import { StyledCollection } from "./styles";
 
-const Collection = () => {
+interface ICollection {
+  children: Array<React.ReactNode>;
+}
+
+const Collection = ({ children }: ICollection) => {
+  const collectionItemNumber: number = Number(
+    import.meta.env.VITE_COLLECTION_NUMBER
+  );
   return (
-    <StyledCollection className="flex flex-row flex-wrap justify-start">
-      <CollectionItem color="#00FF00" selected={true} />
-      <CollectionItem color="#FF0000" />
-      <CollectionItem color="#FFFF00" />
-      <CollectionItem color="#FFFFF0" />
-      <CollectionItem />
-    </StyledCollection>
+    <div className="flex flex-row flex-wrap justify-start">
+      {children.length === collectionItemNumber ? (
+        children
+      ) : (
+        <>
+          {children}
+          <CollectionItem />
+        </>
+      )}
+    </div>
   );
 };
 

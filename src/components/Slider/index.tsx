@@ -1,4 +1,4 @@
-import { StyledSlider } from "./styles";
+import { StyledSlider } from "./style";
 
 interface SliderProps {
   min: number;

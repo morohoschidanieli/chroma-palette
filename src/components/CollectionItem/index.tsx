@@ -23,21 +23,7 @@ const CollectionItem = ({ color, selected = false }: ICollectionType) => {
         >
           <FontAwesomeIcon icon={faPlus} />
         </StyledAddCollectionItem>
-        // <div className="bg-red-600 rounded h-10 w-10 m-1" />
       )}
-
-      {/* <div className="bg-red-600 rounded h-10 w-10 m-1" />
-      <div className="bg-red-600 rounded h-10 w-10 m-1" />
-      <div className="bg-red-600 rounded h-10 w-10 m-1" /> */}
-      {/* <div className="bg-red-600 rounded h-10 w-10 m-1" />
-      <div className="bg-red-600 rounded h-10 w-10 m-1" />{" "}
-      <div className="bg-red-600 rounded h-10 w-10 m-1" />{" "}
-      <div className="bg-red-600 rounded h-10 w-10 m-1" />{" "}
-      <div className="bg-red-600 rounded h-10 w-10 m-1" />{" "}
-      <div className="bg-red-600 rounded h-10 w-10 m-1" />{" "}
-      <div className="bg-red-600 rounded h-10 w-10 m-1" />{" "}
-      <div className="bg-red-600 rounded h-10 w-10 m-1" />{" "}
-      <div className="bg-red-600 rounded h-10 w-10 m-1" /> */}
     </>
   );
 };

@@ -20,7 +20,7 @@ const ColorPreview = ({ color, onClick }: IColorPreview) => {
     <StyledColorPreview
       onClick={onClick ? clickHandler : undefined}
       color={isClicked ? darkenHexColor(color, 0.4) : color}
-      className="flex justify-center items-center cursor-pointer h-24 w-full  rounded-md "
+      className="flex justify-center items-center cursor-pointer h-24 w-full rounded-md "
     >
       {isClicked ? "Copied!" : ""}
     </StyledColorPreview>

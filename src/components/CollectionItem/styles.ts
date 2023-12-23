@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { darkenHexColor } from "@utils";
 import styled from "styled-components";
 

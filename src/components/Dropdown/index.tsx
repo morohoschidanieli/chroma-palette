@@ -17,8 +17,8 @@ export const Dropdown: React.FC<IDropdown> = ({
         onChangeValue(event.target.value as TColorRepresentation)
       }
       className={
-        "mx-3 bg-transparent cursor-pointer rounded p-2 text-xs hover:bg-neutral-600 " +
-        (className ? className : "")
+        (className ? className : "") +
+        "mx-3 bg-transparent cursor-pointer rounded p-2 text-xs hover:bg-neutral-600"
       }
     >
       {children}
